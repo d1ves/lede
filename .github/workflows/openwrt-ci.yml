@@ -57,7 +57,7 @@ jobs:
           
       - name: 更新feeds
         run: |
-          echo "\nsrc-git lienol https://github.com/Lienol/openwrt-package" >>feeds.conf.default
+          echo "src-git lienol https://github.com/Lienol/openwrt-package" >>feeds.conf.default
           ./scripts/feeds clean
           ./scripts/feeds update -a
           rm -rf feeds/lienol/lienol/ipt2socks
