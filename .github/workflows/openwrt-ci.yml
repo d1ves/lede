@@ -7,11 +7,11 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: OpenWrt-CI
+name: 云编译
 
 on:
-  schedule:
-    - cron: 0 20 * * *
+  #schedule:
+  #  - cron: 0 20 * * *
   push:
     branches: 
       - master
@@ -52,7 +52,7 @@ jobs:
       - name: 同步最新的源码
         run: |
           git remote add openwrt https://github.com/coolsnowwolf/lede.git
-          git pull openwrt master
+          git pull master
           git remote -v
           
       - name: 更新feeds
