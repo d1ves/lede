@@ -51,8 +51,8 @@ jobs:
           
       - name: 同步最新的源码
         run: |
-          git remote add origin https://github.com/coolsnowwolf/lede.git
-          git pull origin master --allow-unrelated-histories
+          git remote add openwrt https://github.com/coolsnowwolf/lede.git
+          git pull openwrt master --allow-unrelated-histories
           git remote -v
           
       - name: 更新feeds
