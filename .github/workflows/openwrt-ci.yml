@@ -51,8 +51,8 @@ jobs:
           
       - name: 同步最新的源码
         run: |
-          git remote add origin https://github.com/coolsnowwolf/lede.git
-          git pull origin master
+          git remote add master https://github.com/coolsnowwolf/lede.git
+          git pull
           git remote -v
           
       - name: 更新feeds
