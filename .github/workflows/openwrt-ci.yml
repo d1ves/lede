@@ -52,7 +52,7 @@ jobs:
       - name: 同步最新的源码
         run: |
           git remote add openwrt https://github.com/coolsnowwolf/lede.git
-          git pull master
+          git pull master master
           git remote -v
           
       - name: 更新feeds
