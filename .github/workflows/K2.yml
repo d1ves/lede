@@ -124,29 +124,8 @@ jobs:
           CONFIG_KERNEL_DEBUG_FS=n
           CONFIG_KERNEL_DEBUG_KERNEL=n
           CONFIG_KERNEL_DEBUG_INFO=n
-          CONFIG_PACKAGE_sqm-scripts=n
           CONFIG_PACKAGE_MAC80211_DEBUGFS=n
-          CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-wol-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-vsftpd-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-accesscontrol-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-adbyby-plus-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=n
-          CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=n
-          CONFIG_PACKAGE_vsftpd-alt=n
           CONFIG_OPENLDAP_DEBUG=n
-          CONFIG_PACKAGE_zerotier=n
-          CONFIG_PACKAGE_adbyby=n
-          CONFIG_PACKAGE_chinadns-ng=n
-          CONFIG_PACKAGE_nlbwmon=n
-          CONFIG_PACKAGE_v2ray=n
-          CONFIG_PACKAGE_vlmcsd=n
           EOF
 
           # 固件压缩:
@@ -160,19 +139,10 @@ jobs:
           # EOF
 
           # IPv6支持:
-          cat >> .config <<EOF
+          #cat >> .config <<EOF
           #CONFIG_PACKAGE_dnsmasq_full_dhcpv6=n
           #CONFIG_PACKAGE_ipv6helper=n
-          # close
-          CONFIG_KERNEL_IPV6=n
-          CONFIG_KERNEL_IPV6_MULTIPLE_TABLES=n
-          CONFIG_KERNEL_IPV6_SUBTREES=n
-          CONFIG_KERNEL_IPV6_MROUTE=n
-          CONFIG_IPV6=n
-          CONFIG_PACKAGE_kmod-ip6tables=n
-          CONFIG_PACKAGE_kmod-nf-ipt6=n
-          CONFIG_PACKAGE_kmod-nf-reject6=n
-          EOF
+          #EOF
 
           # 多文件系统支持:
           #cat >> .config <<EOF
@@ -197,45 +167,43 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-passwall=y
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ipt2socks=y
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_socks=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_socks=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_socks=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_socks=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=n
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=n
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_pdnsd=y
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=n
-          CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=n
+          #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=n
           CONFIG_PACKAGE_luci-app-firewall=y
           CONFIG_PACKAGE_luci-app-flowoffload=y
           # close
-          CONFIG_PACKAGE_luci-app-filetransfer=n
-          CONFIG_DEFAULT_luci-app-accesscontrol=n
-          CONFIG_DEFAULT_luci-app-adbyby-plus=n
-          CONFIG_DEFAULT_luci-app-arpbind=n
-          CONFIG_PACKAGE_luci-app-nlbwmon=n
-          CONFIG_PACKAGE_luci-app-cpufreq=n
-          CONFIG_PACKAGE_luci-app-autoreboot=n
-          CONFIG_PACKAGE_luci-app-ramfree=n
-          CONFIG_PACKAGE_luci-app-samba=n
-          CONFIG_PACKAGE_luci-app-unblockmusic=n
-          CONFIG_PACKAGE_luci-app-upnp=n
-          CONFIG_PACKAGE_luci-app-wol=n
-          CONFIG_DEFAULT_luci-app-zerotier=n
-          CONFIG_DEFAULT_luci-proto-relay=n
-          CONFIG_DEFAULT_luci-app-vlmcsd=n
-          CONFIG_DEFAULT_luci-app-vsftpd=n
-          CONFIG_DEFAULT_luci-app-ddns=n
-          CONFIG_DEFAULT_luci-app-sfe=n
-          CONFIG_DEFAULT_luci-app-sqm=n
-          CONFIG_DEFAULT_luci-app-ssr-plus=n
-          CONFIG_PACKAGE_ddns-scripts=n
-          CONFIG_PACKAGE_ddns-scripts_aliyun=n
+          #CONFIG_PACKAGE_luci-app-filetransfer=n
+          #CONFIG_DEFAULT_luci-app-accesscontrol=n
+          #CONFIG_DEFAULT_luci-app-adbyby-plus=n
+          #CONFIG_DEFAULT_luci-app-arpbind=n
+          #CONFIG_PACKAGE_luci-app-nlbwmon=n
+          #CONFIG_PACKAGE_luci-app-cpufreq=n
+          #CONFIG_PACKAGE_luci-app-autoreboot=n
+          #CONFIG_PACKAGE_luci-app-ramfree=n
+          #CONFIG_PACKAGE_luci-app-samba=n
+          #CONFIG_PACKAGE_luci-app-unblockmusic=n
+          #CONFIG_PACKAGE_luci-app-upnp=n
+          #CONFIG_PACKAGE_luci-app-wol=n
+          #CONFIG_DEFAULT_luci-app-zerotier=n
+          #CONFIG_DEFAULT_luci-proto-relay=n
+          #CONFIG_DEFAULT_luci-app-vlmcsd=n
+          #CONFIG_DEFAULT_luci-app-vsftpd=n
+          #CONFIG_DEFAULT_luci-app-ddns=n
+          #CONFIG_DEFAULT_luci-app-sfe=n
+          #CONFIG_DEFAULT_luci-app-sqm=n
+          #CONFIG_DEFAULT_luci-app-ssr-plus=n
           EOF
 
           # LuCI主题:
