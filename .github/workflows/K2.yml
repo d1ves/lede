@@ -140,7 +140,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=n
           CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=n
           CONFIG_PACKAGE_vsftpd-alt=n
-          CONFIG_OPENLDAP_DEBUG=y
+          CONFIG_OPENLDAP_DEBUG=n
           CONFIG_PACKAGE_zerotier=n
           CONFIG_PACKAGE_adbyby=n
           CONFIG_PACKAGE_chinadns-ng=n
@@ -230,12 +230,12 @@ jobs:
           CONFIG_DEFAULT_luci-proto-relay=n
           CONFIG_DEFAULT_luci-app-vlmcsd=n
           CONFIG_DEFAULT_luci-app-vsftpd=n
-          CONFIG_DEFAULT_luci-app-ddns=y
+          CONFIG_DEFAULT_luci-app-ddns=n
           CONFIG_DEFAULT_luci-app-sfe=n
           CONFIG_DEFAULT_luci-app-sqm=n
           CONFIG_DEFAULT_luci-app-ssr-plus=n
-          CONFIG_PACKAGE_ddns-scripts=y
-          CONFIG_PACKAGE_ddns-scripts_aliyun=y
+          CONFIG_PACKAGE_ddns-scripts=n
+          CONFIG_PACKAGE_ddns-scripts_aliyun=n
           EOF
 
           # LuCI主题:
